@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="responsive.css">
+    <style>
+         * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .home {
+        height: 100vh;
+        width: 100%;
+        background-color: hsl(0, 0%, 6%);
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 8%;
+        padding-left: 8%;
+        background-color: #191919;
+        border-bottom: 1px solid red;
+    }
+    .logo {
+        color: white;
+        font-size: 35px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+    span {
+        color:red;
+    }
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 25px;
+    }
+    nav ul li a {
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    nav ul li a:hover {
+        color: red;
+        transition: 0.5s;
+    }
+    .btn {
+        background-color: red;
+        color: white;
+        border: 2px solid white;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 30px;
+        transition: transform .5s;
+    }
+    .btn:hover {
+        transform: scale(1.2);
+        border: 2px solid  red;
+        background-color: transparent;
+    }
+    .image {
+        width: 50%;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        transform: rotateY(110deg);
+    }
+    .image img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 23%;
+        transform: translateX(20%);
+    }
+    .content {
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        transform: translateY(50%);
+    }
+    h4 {
+        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    h1 {
+        color: white;
+        font-size: 40px;
+        margin: 20px 0 20px;
+    }
+    .content a {
+        font-size: 20px;
+        background-color: red;
+        color: white;
+        display: inline-block;
+        padding: 10px 30px;
+        border-radius: 30px;
+        border: 2px solid white;
+        transition: .5s;
+    }
+    .content a:hover {
+        background: transparent;
+        border: 2px solid red; 
+    }
+    .about {
+        width: 100%;
+        padding: 100px 0;
+        background-color: #191919;
+    }
+    .about-me {
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .about-me img {
+        height: auto;
+        width: 430px;
+        border-radius: 50%;
+    }
+    .about-text {
+        width: 550px;
+    }
+    .about-text h2 {
+        color: white;
+        font-size: 65px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        border-bottom: 1px solid red;
+    }
+    .about-text p {
+        color: #fcfc;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 45px;
+        text-align: justify;
+    }
+    .button {
+        background-color: red;
+        color: white;
+        border: 2px solid white;
+        font-weight: bold;
+        padding: 13px 30px;
+        border-radius: 30px;
+        transition: .5s;
+    }
+    .button.hover {
+        background-color: transparent;
+        border: 2px solid red;
+        cursor: pointer;
+    }
+    .service {
+        background: #101010;
+        width: 100%;
+        padding: 100px 0;
+    }
+    .title h2 {
+        color: white;
+        font-size: 75;
+        width: 100%;
+        margin-bottom: 30px auto;
+        text-align: center;
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+    }
+    .card {
+        height: 365px;
+        width: 270px;
+        padding: 20px 35px;
+        background: #141414;
+        border-radius: 20px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        border: 1px solid red;
+    }
+    .card i {
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        margin: 25px 0;
+        color: red;
+    }
+    .card h5{
+        color: white;
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+    .pra p {
+        color: #fcfc;
+        font-size: 16px;
+        line-height: 27px;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    .pra p a {
+        background-color: red;
+        color: white;
+        border: 2px solid white;
+        font-weight: bold;
+        padding: 9px 22px;
+        border-radius: 30px;
+    }
+    .pra p a:hover {
+        background-color: transparent;
+        border: 2px solid red;
+        cursor: pointer;
+    }
+    .skill {
+        background: #191919;
+        width: 100%;
+        padding: 100px 0;
+    }
+    .skill-bar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+    }
+    .skill-bar p {
+        text-align: left;
+    }
+    .skill-box {
+        text-align: right;
+        width: 100%;
+        background-color: white;
+    }
+    .html {
+        width: 90%;
+        background-color: red;
+    }
+    .css {
+        width: 0;
+        background-color: red;
+    }
+    .javascript {
+        width: 0;
+        background-color: red;
+    }
+    .react {
+        width: 0;
+        background-color: red;
+    }
+    .php {
+        width: 90%;
+        background-color: red;
+    }
+    .Phyton {
+    width: 90%;
+    background-color: red;
+    }
+    .Mysql {
+        width: 0;
+        background-color: red;
+    }
+    .firebase {
+        width: 0%;
+        background-color: red;
+    }
+    .figma {
+        width: 90%;
+        background-color: red;
+    }
+    .sketch {
+        width: 70%;
+        background-color: red;
+    }
+    .contact-me {
+        background-color: #101010;
+        padding: 50px 20px;
+        color: white;
+        text-align: center;
+    }
+
+        .contact-text h2 {
+            font-size: 55px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-box {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #f5f5f5;
+        }
+
+        .contact-item p {
+            font-size: 16px;
+        }
+
+        .contact-item a {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .sosial {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .sosial a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: red;
+            border-radius: 50%;
+            color: white;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .sosial a:hover {
+            transform: scale(1.2);
+            background: transparent;
+            border: 2px solid red;
+        }
+
+        .map-box {
+            margin-top: 30px;
+        }
+
+        .map-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service {
+            background: #101010;
+            padding: 50px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .service .title h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .service .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service .card {
+            background: #191919;
+            border: 1px solid red;
+            border-radius: 15px;
+            padding: 20px;
+            width: 270px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .service .card i {
+            font-size: 50px;
+            color: red;
+            margin-bottom: 15px;
+        }
+
+        .service .card h5 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .service .card p {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="home">
+        <nav>
+            <h2 class="logo">Porto<span>folio</span></h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>     
+                <li><a href="#service">Services</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="home">
+            <div class="image">
+                <img src="spider-removebg.png">
+            </div>
+            <div class="content">
+                <h4>Hallo, My Name Is</h4>
+                <h1>Muhamad Pr<span>iska Yamani <i class="fa-sharp fa-solid fa-spider fa-flip fa-2xs" style="color: #ff0000;"></i></h1>
+                <a href="#"><i class="far fa-user"> More About Me</i></a>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <section class="about">
+            <div class="about-me">
+                <img src="yamani.jpg">
+                <div class="about-text">
+                    <h2>about <span>me <i class="fa-sharp fa-solid fa-spider fa-flip fa-2xs" style="color: #ff0000;"></i></span></h2>
+                    <p>Hello! allow me to introduce myself, my full name is Muhamad Priska Yamani, people can call me
+                        Yamani, now I live in tajur, my address is in Balubursari village, Kampung anyar pentas
+                        subdistrict, Bogor district, I come from Bogor, that's all from me, thank you for your
+                        attention.</p>
+                    <a href="#" class="button">content Me</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="service" class="service">
+        <div class="title">
+            <h2>Services <i class="fa-sharp fa-solid fa-spider fa-flip fa-2xs" style="color: #ff0000;"></i></h2>
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>Web Development</h5>
+                <p>Build responsive and modern websites tailored to your needs.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-user"></i>
+                <h5>Web Design</h5>
+                <p>Create visually appealing designs that enhance user experience.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-bell"></i>
+                <h5>UI/UX Design</h5>
+                <p>Deliver intuitive and user-friendly interfaces for better engagement.</p>
+            </div>
+        </div>
+    </div>
+    <div id="skill">
+
+        <section class="skill">
+            <div class="title">
+                <h2>Ski<span>lls <i class="fa-sharp fa-solid fa-spider fa-flip fa-2xs" style="color: #ff0000;"></i></span></h2>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <i class="fas fa-bars"></i>
+                    <h5>Front-End Developer</h5>
+                    <div class="skill-bar">
+                        <p>HTML</p>
+                        <div class="skill-box">
+                            <div class="Html">90%</div>
+                        </div>
+                        <p>CSS</p>
+                        <div class="skill-box">
+                            <div class="css">80%</div>
+                        </div>
+                        <p>Javascript</p>
+                        <div class="skill-box">
+                            <div class="javascript">75%</div>
+                        </div>
+                        <p>React js</p>
+                        <div class="skill-box">
+                            <div class="react">70%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user"></i>
+                    <h5>Back-End Developer</h5>
+                    <div class="skill-bar">
+                        <p>PHP</p>
+                        <div class="skill-box">
+                            <div class="Html">90%</div>
+                        </div>
+                        <p>Phyton</p>
+                        <div class="skill-box">
+                            <div class="css">80%</div>
+                        </div>
+                        <p>Mysql</p>
+                        <div class="skill-box">
+                            <div class="Mysql">5%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bell"></i>
+                    <h5>UI /UX Design</h5>
+                    <div class="skill-bar">
+                        <p>Figma</p>
+                        <div class="skill-box">
+                            <div class="Figma">90%</div>
+                        </div>
+                        <p>Sketch</p>
+                        <div class="skill-box">
+                            <div class="Sketch">80%</div>
+                        </div>
+                        <p>Photoshop</p>
+                        <div class="skill-box">
+                            <div class="Photoshop">75%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="contact" class="contact-me">
+        <div class="contact-text">
+            <h2>Contact <span>Me <i class="fa-sharp fa-solid fa-spider fa-flip fa-2xs" style="color: #ff0000;"></i></span></h2>
+            <div class="contact-info">
+                <div class="contact-box">
+                    <div class="contact-item">
+                        <i class="fas fa-phone" style="color: red; font-size: 20px; margin-bottom: 5px;"></i>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+621234567890">+62 123 456 7890</a></p>
+                    </div>
+                    <div class="sosial">
+                        <a href="https://github.com/muhamadpriskayamani" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/username" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="map-box">
+                    <h3>Find Me Here</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.7508561848898!2d106.83377256952836!3d-6.646494667492446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c8b8baffe729%3A0xc35d8967ae45fcce!2sJl.%20Balubur%20Sari%20No.6%2C%20Muarasari%2C%20Kec.%20Bogor%20Sel.%2C%20Kota%20Bogor%2C%20Jawa%20Barat%2016137!5e0!3m2!1sid!2sid!4v1733876302862!5m2!1sid!2sid"
+                        frameborder="0" style="border:0; width: 100%; height: 300px;" allowfullscreen="">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
